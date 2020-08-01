@@ -23,6 +23,7 @@ class LinkedList:
             node.set_next(self.head)
 
         self.head = node
+        print('Add to head:', value)
 
     def contains(self, value):
         if not self.head:
@@ -48,14 +49,14 @@ class LinkedList:
             cur.next = prev
             prev = cur
             cur = nxt
-            # print(prev.value)
+            print('Reverse list:', prev.value)
         return prev
 
-# rev = LinkedList()
+rev = LinkedList()
 
-# rev.add_to_head(4)
-# rev.add_to_head(3)
-# rev.add_to_head(2)
-# rev.add_to_head(1)
+rev.add_to_head(4)
+rev.add_to_head(3)
+rev.add_to_head(2)
+rev.add_to_head(1)
 
-# rev.reverse_list()
+rev.reverse_list()
