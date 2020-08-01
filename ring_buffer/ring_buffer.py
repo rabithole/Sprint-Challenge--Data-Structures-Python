@@ -21,15 +21,15 @@ class RingBuffer:
 
 buffer = RingBuffer(5)
 
-buffer.append('a')
-buffer.append('b')
-buffer.append('c')
-buffer.append('d')
-buffer.append('e')
-buffer.append('f')
-buffer.append('g')
-buffer.append('h')
-buffer.append('i')
+# buffer.append('a')
+# buffer.append('b')
+# buffer.append('c')
+# buffer.append('d')
+# buffer.append('e')
+# buffer.append('f')
+# buffer.append('g')
+# buffer.append('h')
+# buffer.append('i')
 
 
-buffer.get()
+# buffer.get()
