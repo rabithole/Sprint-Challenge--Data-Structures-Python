@@ -13,11 +13,25 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
+# )(n)
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
+
 duplicates = set(names_1) & set(names_2)
+
+# def common_member(a, b): 
+#     a_set = set(a) 
+#     b_set = set(b) 
+  
+#     if (a_set & b_set): 
+#         print(a_set & b_set) 
+#     else: 
+#         print("No common elements")  
+
+print(names_2)
+# common_member(names_1, names_2)
 
 		
 
