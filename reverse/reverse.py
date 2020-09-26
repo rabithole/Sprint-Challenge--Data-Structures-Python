@@ -23,7 +23,7 @@ class LinkedList:
             node.set_next(self.head)
 
         self.head = node
-        print('Add to head:', value)
+        # print('Add to head:', value)
 
     def contains(self, value):
         if not self.head:
@@ -39,24 +39,24 @@ class LinkedList:
 
         return False
 
-    def reverse_list(self):
-        prev = None
-        cur = self.head
-        nxt = self.head
 
-        while cur != None:
-            nxt = nxt.next_node
-            cur.next = prev
-            prev = cur
-            cur = nxt
-            print('Reverse list:', prev.value)
-        return prev
+    def reverse_list(self, node, prev):        
+        if node is None:
+            # print(node)
+            return None
+        # if list has only 1 node
+        if node.next_node is None:
+            self.head = node
+            print('Node = head', node.value)
+            return node
+
+        temporary_node = self.reverse_list(node.get_next(), node)
+        # print('temporary_node', temporary_node.value)
+        temporary_node.next_node = node
+        # print('next temp', node.value)
+        node.set_next(None)
+        # print(node.value)
+
+        return node
 
 rev = LinkedList()
-
-rev.add_to_head(4)
-rev.add_to_head(3)
-rev.add_to_head(2)
-rev.add_to_head(1)
-
-rev.reverse_list()
