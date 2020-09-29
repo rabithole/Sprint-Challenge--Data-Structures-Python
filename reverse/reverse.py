@@ -47,7 +47,7 @@ class LinkedList:
         # if list has only 1 node
         if node.next_node is None:
             self.head = node
-            print('Node = head', node.value)
+            # print('Node = head', node.value)
             return node
 
         temporary_node = self.reverse_list(node.get_next(), node)

@@ -13,23 +13,28 @@ f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
 
+
+# O(n²) or O(n^2) aka Quadratic or polynomial time. ----------------------------
+
 # Replace the nested for loops below with your improvements
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-duplicates = set(names_1) & set(names_2)
+# faster solution --------------------------------------------------------------
+# duplicates = set(names_1) & set(names_2)
 
-# bst = BSTNode('')
+# Using binary tree -------------------------------------------------------------
+bst = BSTNode('')
 
-# for i in names_1:
-# 	bst.insert(i)
+for i in names_1:
+	bst.insert(i)
 
-# for i in names_2:
-# 	duplicate = bst.contains(i)
-# 	if duplicate is True:
-# 		duplicates.append(i)
+for i in names_2:
+	duplicate = bst.contains(i)
+	if duplicate is True:
+		duplicates.append(i)
 		
 
 end_time = time.time()
